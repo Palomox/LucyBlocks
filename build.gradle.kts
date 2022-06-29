@@ -27,15 +27,6 @@ java {
 
 dependencies {
   paperDevBundle("1.19-R0.1-SNAPSHOT")
-  implementation("cloud.commandframework", "cloud-paper", "1.6.1")
-  implementation("cloud.commandframework", "cloud-annotations", "1.6.1")
-  implementation("org.spongepowered", "configurate-hocon", "4.1.2")
-  implementation("org.spongepowered", "configurate-gson", "4.1.2")
-  // paperweightDevBundle("com.example.paperfork", "1.18.1-R0.1-SNAPSHOT")
-
-  // You will need to manually specify the full dependency if using the groovy gradle dsl
-  // (paperDevBundle and paperweightDevBundle functions do not work in groovy)
-  // paperweightDevelopmentBundle("io.papermc.paper:dev-bundle:1.18.1-R0.1-SNAPSHOT")
 }
 
 tasks {
@@ -76,13 +67,12 @@ bukkit {
 	commands {
         register("placeblock") {
             description = "Places a luckyblock"
-            //aliases = listOf("t")
-            //permission = "testplugin.test"
-            // usage = "Just run the command!"
-            // permissionMessage = "You may not test this command!" 
+			permission = "lucyblocks.place"
+            usage = "Run the command and a block with appear on your position"
+            permissionMessage = "You may not palce Lucky Blocks" 
         }
 		register("back"){
-			description = "Teleports you back to your last death location"
+			description = "Teleports you back to your last death location, if there is any"
 		}
         // ...
     }

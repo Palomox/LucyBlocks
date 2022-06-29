@@ -10,7 +10,6 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.metadata.FixedMetadataValue;
-import org.bukkit.metadata.MetadataValue;
 import org.jetbrains.annotations.NotNull;
 
 import ga.palomox.plugins.lucyblocks.LucyBlocks;
@@ -20,7 +19,7 @@ public class LuckyBlockCommand implements CommandExecutor {
 	public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label,
 			@NotNull String[] args) {
 		if(sender instanceof Player player) {
-			if(!sender.isOp()) {
+			if(!sender.hasPermission("lucyblocks.place") || !sender.isOp()) {
 				return false; 
 			}
 			BlockData data = Bukkit.getServer().createBlockData(Material.SPONGE);
