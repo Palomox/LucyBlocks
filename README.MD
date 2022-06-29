@@ -2,9 +2,9 @@
 Here is the source code for the paper plugin LucyBlocks which is a simple Lucky Blocks plugin I created for my friends.
 
 ## Downloading 
-Just get the latest release from the github actions tab
+Just get the latest release from the github actions tab. Then, unzip the downloaded file and put it in your plugins folder.
 
-If you want to compile it yourself, pull the repo and compile using gradle.
+If you want to compile it yourself, pull the repo and compile using ``gradle jar``.
 
 ## Contributing 
 
